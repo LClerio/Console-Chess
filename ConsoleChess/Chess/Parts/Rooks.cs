@@ -13,7 +13,7 @@ namespace ConsoleChess.Chess.Parts
         public Rooks(ChessBoard board, PartColor color) : base(board, color) { }
         public override string ToString()
         {
-            return "T";
+            return "R";
         }
     }
 }

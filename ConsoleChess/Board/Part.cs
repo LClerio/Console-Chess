@@ -12,7 +12,7 @@ namespace ConsoleChess.Board
         public Position Position { get; set; }
         public ChessBoard Board { get; protected set; }
         public PartColor Color { get; protected set; }
-        public int AmountMoviment { get; protected set; }
+        public int Moviment { get; protected set; }
 
         public Part(ChessBoard board, PartColor color)
         {
@@ -21,6 +21,11 @@ namespace ConsoleChess.Board
             Color = color;
         }
 
+        // incrementar movimento
+        public void increaseMoviment()
+        {
+            Moviment++;
+        }
 
     }
 }

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleChess.Chess.Parts
 {
-    internal class Knights : Part
+    internal class Horse : Part
     {
-        public Knights(ChessBoard board, PartColor color) : base(board, color) { }
+        public Horse(ChessBoard board, PartColor color) : base(board, color) { }
         public override string ToString()
         {
-            return "C";
+            return "H";
         }
     }
 }

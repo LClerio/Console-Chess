@@ -14,7 +14,7 @@ namespace ConsoleChess.Chess.Parts
 
         public override string ToString()
         {
-            return "R";
+            return "K";
         }
     }
 }

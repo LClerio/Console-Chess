@@ -3,20 +3,31 @@
 using ConsoleChess;
 using ConsoleChess.Board;
 using ConsoleChess.Board.Enums;
+using ConsoleChess.Chess;
 using ConsoleChess.Chess.Parts;
 ;
 
 try
 {
-    ChessBoard board = new ChessBoard(8, 8);
 
-    board.PlacePart(new Rooks(board, PartColor.Black), new Position(0, 0));
-    board.PlacePart(new King(board, PartColor.Black), new Position(1, 3));
-    board.PlacePart(new bishops(board, PartColor.Black), new Position(2, 4));
+   ChessMatch match = new ChessMatch();
 
-    board.PlacePart(new Pawns(board, PartColor.White), new Position(3, 5));
+    while (!match.Finished)
+    {
+        Console.Clear();
+        Screen.PrintBoard(match.Board);
 
-    Screen.PrintBoard(board);
+        Console.WriteLine();
+        Console.Write("Origem: ");
+        Position origem = Screen.readeChessPosition().toPosition();
+        Console.Write("Destino: ");
+        Position destino = Screen.readeChessPosition().toPosition();
+
+        match.Moviment(origem, destino);
+
+
+    }
+
 }
 catch(ChessBoardExeption e)
 {

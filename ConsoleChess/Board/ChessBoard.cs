@@ -38,7 +38,7 @@ namespace ConsoleChess.Board
         }
 
         //colocar peças
-        public void PlacePart(Part p, Position pos)
+        public void AddPart(Part p, Position pos)
         {
             if(IsPart(pos))
             {
@@ -46,6 +46,15 @@ namespace ConsoleChess.Board
             }
             Parts[pos.Line, pos.Column] = p;
             p.Position = pos;
+        }
+        public Part RemovePart(Position pos)
+        {
+            if (!IsPart(pos)) return null; 
+
+            Part aux = part(pos);
+            aux.Position = null;
+            Parts[pos.Line, pos.Column] = null;
+            return aux;
         }
 
         //testar se posição é valida
