@@ -15,12 +15,12 @@ namespace ConsoleChess
             {
                 for(int j = 0; j < board.Columns; j++)
                 {
-                    if(board.Part(i, j) == null)
+                    if(board.part(i, j) == null)
                     {
                         Console.Write("- ");
                     } else
                     {
-                        Console.WriteLine($"{board.Part(i, j)} ");
+                        Console.Write(board.part(i, j) + " ");
                     }
                 }
                 Console.WriteLine();

@@ -14,11 +14,13 @@ namespace ConsoleChess.Board
         public PartColor Color { get; protected set; }
         public int AmountMoviment { get; protected set; }
 
-        public Part(Position position, ChessBoard board, PartColor color)
+        public Part(ChessBoard board, PartColor color)
         {
-            Position = position;
+            Position = null;
             Board = board;
             Color = color;
         }
+
+
     }
 }
