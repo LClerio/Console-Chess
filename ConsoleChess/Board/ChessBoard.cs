@@ -42,7 +42,7 @@ namespace ConsoleChess.Board
         {
             if(IsPart(pos))
             {
-                throw new ChessBoardExeption("Já existe uma peça nesta posição");
+                throw new ChessBoardExeption("Já existe uma peça nessa posição");
             }
             Parts[pos.Line, pos.Column] = p;
             p.Position = pos;
@@ -51,7 +51,7 @@ namespace ConsoleChess.Board
         //testar se posição é valida
         public bool ValidPosition(Position pos)
         {
-            if(pos.Line < 0 || pos.Line >= Lines || pos.Column < 0 || pos.Line >= Columns)
+            if(pos.Line < 0 || pos.Line >= Lines || pos.Column < 0 || pos.Column >= Columns)
             {
                 return false; //posição não é valida
             }
